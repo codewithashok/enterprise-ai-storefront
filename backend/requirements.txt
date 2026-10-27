@@ -1,0 +1,17 @@
+fastapi>=0.115.0   # FastAPI framework for building APIs
+uvicorn[standard]>=0.30.0 # ASGI server for running FastAPI applications (Asynchronous Server Gateway Interface)
+pydantic>=2.8.0 # Data validation and settings management using Python type annotations
+pydantic-settings>=2.4.0 # Settings management for Pydantic models
+sqlalchemy>=2.0.32 # SQL toolkit and Object-Relational Mapping (ORM) library
+asyncpg>=0.29.0 # Asynchronous PostgreSQL driver
+psycopg2-binary>=2.9.9 # PostgreSQL database adapter for Python
+pgvector>=0.3.2 # Vector similarity search for PostgreSQL
+python-jose[cryptography]>=3.3.0 # JSON Object Signing and Encryption (JOSE) library with cryptography backend
+passlib[bcrypt]>=1.7.4 # Password hashing library with bcrypt backend
+python-multipart>=0.0.9 # Multipart form data parsing for Python
+langchain>=0.2.14 # Language chain library
+langgraph>=0.2.14 # Language graph library
+langchain-openai>=0.1.23 # OpenAI integration for LangChain
+resend>=2.1.0 # Email sending library
+stripe>=10.7.0 # Payment processing library
+mangum>=0.17.0 # AWS Lambda handler for FastAPI
