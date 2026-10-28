@@ -7,7 +7,7 @@ services:
       POSTGRES_PASSWORD: "123456"
       POSTGRES_DB: storefront
     ports:
-      - "5432:5432"
+      - "5433:5432"  # host 5433 → avoids clash with native Windows Postgres on 5432
     volumes:
       - pgdata:/var/lib/postgresql/data
     restart: unless-stopped
