@@ -2,6 +2,7 @@ fastapi>=0.115.0   # FastAPI framework for building APIs
 uvicorn[standard]>=0.30.0 # ASGI server for running FastAPI applications (Asynchronous Server Gateway Interface)
 pydantic>=2.8.0 # Data validation and settings management using Python type annotations
 pydantic-settings>=2.4.0 # Settings management for Pydantic models
+email-validator>=2.1.0 # Backs Pydantic's EmailStr type
 sqlalchemy>=2.0.32 # SQL toolkit and Object-Relational Mapping (ORM) library
 asyncpg>=0.29.0 # Asynchronous PostgreSQL driver
 psycopg2-binary>=2.9.9 # PostgreSQL database adapter for Python
