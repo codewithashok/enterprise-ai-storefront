@@ -5,16 +5,13 @@ from fastapi.concurrency import run_in_threadpool
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy import select
 from sqlalchemy.exc import IntegrityError
-from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.security import CurrentUser, create_access_token, hash_password, verify_password
 from app.db.models import User
-from app.db.session import get_db
+from app.db.session import DbSession
 from app.schemas.auth import Token, UserCreate, UserRead
 
 router = APIRouter(prefix="/auth", tags=["auth"])
-
-DbSession = Annotated[AsyncSession, Depends(get_db)]
 
 # Unknown-email logins still run one bcrypt check, so response time doesn't reveal which emails exist
 _DUMMY_HASH = hash_password("timing-equalizer")

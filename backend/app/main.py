@@ -8,7 +8,7 @@ from openai import AsyncOpenAI
 from sqlalchemy import text
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.api.v1 import auth
+from app.api.v1 import auth, products
 from app.core.config import settings
 from app.db.session import engine, get_db
 
@@ -38,6 +38,7 @@ app.add_middleware(
 )
 
 app.include_router(auth.router, prefix="/api/v1")
+app.include_router(products.router, prefix="/api/v1")
 
 
 @app.get("/api/health", tags=["system"])
