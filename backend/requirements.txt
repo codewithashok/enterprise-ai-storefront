@@ -6,8 +6,8 @@ sqlalchemy>=2.0.32 # SQL toolkit and Object-Relational Mapping (ORM) library
 asyncpg>=0.29.0 # Asynchronous PostgreSQL driver
 psycopg2-binary>=2.9.9 # PostgreSQL database adapter for Python
 pgvector>=0.3.2 # Vector similarity search for PostgreSQL
-python-jose[cryptography]>=3.3.0 # JSON Object Signing and Encryption (JOSE) library with cryptography backend
-passlib[bcrypt]>=1.7.4 # Password hashing library with bcrypt backend
+PyJWT>=2.9.0 # JWT encode/decode (replaces unmaintained python-jose)
+bcrypt>=4.2.0 # Password hashing (used directly; passlib is unmaintained and breaks on bcrypt>=4.1)
 python-multipart>=0.0.9 # Multipart form data parsing for Python
 langchain>=0.2.14 # Language chain library
 langgraph>=0.2.14 # Language graph library
