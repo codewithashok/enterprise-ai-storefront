@@ -22,6 +22,7 @@ class Settings(BaseSettings):
     POSTGRES_PORT: int = 5432
     POSTGRES_DB: str = "storefront"
 
+    # Secrets: no real defaults — set in backend/.env (gitignored)
     OPENAI_API_KEY: SecretStr = SecretStr("")
     EMBEDDING_MODEL: str = "text-embedding-3-small"
     EMBEDDING_DIM: int = 1536
